@@ -1,0 +1,94 @@
+
+.checklabel {
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    color: rgb(74, 74, 74);
+    font-family: 'Open Sans';
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+label .checkbox {
+	position: absolute;
+    appearance: none;
+}
+
+.checkbox:checked {
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(33, 150, 243);
+    border-radius: 2px;
+}
+
+.checkbox:focus-visible {
+    outline: 2px solid #F4A68F;
+}
+
+.checklabel {
+	display: block;
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+}
+
+.checkname {
+    padding-left: 30px;
+}
+
+.checklabel span:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 0;
+	top: 0;
+    background-color: transparent;
+    border: 1px solid rgb(154, 187, 206);
+    border-radius: 2px;
+}
+
+.checklabel .checkbox:checked + span:before {
+	left: 4px;
+    top: 3px;
+    width: 10px;
+    height: 6px;
+    border-radius: 1px;
+    border-right: none;
+    border-top: none;
+    border-left: 4px solid #2196F3;
+    border-bottom: 4px solid #2196F3;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.checklabel span:active:before {
+    box-sizing: border-box;
+    border: 1px solid rgb(33, 150, 243);
+    border-radius: 2px;
+}
+
+@media (min-width: 512px) and (max-width: 767px) {
+    li {
+        flex-shrink: 1;
+        flex-grow: 1;
+    }
+    .checklabel {
+        font-size: 11px;
+    }
+    .checkfilters {
+        flex-shrink: 1;
+        flex-grow: 1;
+    }
+    .smallFilters {
+        flex-shrink: 4;
+        flex-grow: 4;
+    }
+}

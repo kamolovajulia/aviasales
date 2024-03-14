@@ -1,0 +1,47 @@
+{
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": "airbnb",
+    "parserOptions": {
+        "parser": "babel-eslint",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "quotes": ["error", "single"],
+        "comma-dangle": ["error", "never"],
+        "linebreak-style": 0,
+        "indent": ["error", 4],
+        "react/jsx-indent" : ["error", 4, { "props": 4 }],
+        "max-len": [
+            "error",
+            {
+                "code": 130,
+                "ignoreUrls": true,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true
+            }
+        ],
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+        "eqeqeq": ["error", "always"]
+    },
+    "plugins": ["react"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        }
+    }
+}

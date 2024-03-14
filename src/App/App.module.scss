@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../assets/fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url('../assets/fonts/OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.content {
+    background-color: rgb(243, 247, 250);
+}
+
+.content__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.filter {
+    border: 1px solid #DFE5EC;
+    //border-radius: 5px;
+    background-color: #FFFFFF;
+    //background-color: transparent;
+    font-family: 'Open Sans Bold';
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.filter:hover {
+    background-color: #2196F3;
+    color: rgb(255, 255, 255);
+}
+
+.filter:focus-visible {
+    position: relative;
+    outline: 2px solid #F4A68F;
+}
+
+.active {
+    background-color: #2196F3;
+    color: rgb(255, 255, 255);
+}
+
+.showTickets {
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(33, 150, 243);
+    color: rgb(255, 255, 255);
+    font-family: 'Open Sans Bold';
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.showTickets:focus-visible {
+    outline: 2px solid #F4A68F;
+}
+
+@media (max-width: 511px) {
+    .content__main {
+        padding: 0;
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .showTickets {
+        width: 80%;
+    }
+
+    .content__logo {
+        height: 120px;
+    }
+
+    aside {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 512px) and (max-width: 767px) {
+    .content__main {
+        padding: 0;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .showTickets {
+        width: 480px;
+    }
+
+    .content__logo {
+        height: 160px;
+    }
+
+    aside {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content__main {
+        display: flex;
+        gap: 20px;
+    }
+
+    .showTickets {
+        width: 502px;
+    }
+
+    .content__logo {
+        height: 160px;
+    }
+}
+
+@media (min-width: 1024px) {
+  
+}
